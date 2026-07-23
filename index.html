@@ -14,12 +14,28 @@
         <h1>Ta vie. Ton rythme.<br>Un seul système.</h1>
         <p class="hero__lede">
           Entraînement, nutrition, planning et communauté enfin réunis dans une seule
-          intelligence qui s'adapte à ta vie réelle — pour transformer la motivation
+          intelligence qui s'adapte à ta vie réelle pour transformer la motivation
           passagère en discipline durable.
         </p>
       </div>
       <div class="hero__image reveal">
-        <img src="assets/2.jpg" alt="Tableau de bord Synk affiché sur un téléphone tenu à la main">
+        <div class="day-schematic">
+          <p class="day-schematic__label">Aujourd'hui · Mardi</p>
+          <ul class="day-schematic__list">
+            <li>
+              <span class="day-schematic__time">07h30</span>
+              <span class="day-schematic__event">Petit-déj recalculé — 42g glucides</span>
+            </li>
+            <li class="is-active">
+              <span class="day-schematic__time">19h00</span>
+              <span class="day-schematic__event">Séance sanctuarisée avec Léa</span>
+            </li>
+            <li>
+              <span class="day-schematic__time">21h15</span>
+              <span class="day-schematic__event">Rapport du coach — squat en hausse</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -32,7 +48,7 @@
         d'un <strong>système cohérent</strong>.
       </p>
       <p>
-        Le marché du fitness actuel est fragmenté en applications isolées —
+        Le marché du fitness actuel est fragmenté en applications isolées
         un outil pour les calories, un pour les séances, un pour l'agenda.
         Cette dispersion génère une fatigue mentale, un manque de régularité
         et un taux d'abandon élevé.
@@ -42,7 +58,24 @@
   <section class="vision">
     <div class="container vision__grid">
       <div class="vision__image reveal">
-        <img src="assets/1.jpg" alt="Écrans d'onboarding Synk demandant l'âge, le poids et la taille pour personnaliser l'expérience">
+        <div class="onboarding-schematic module-schematic">
+          <div class="onboarding-schematic__row">
+            <span class="onboarding-schematic__label">Âge</span>
+            <span class="module-schematic__track"><span class="module-schematic__fill" style="--fill: 36%"></span></span>
+            <span class="onboarding-schematic__value">27 ans</span>
+          </div>
+          <div class="onboarding-schematic__row">
+            <span class="onboarding-schematic__label">Poids</span>
+            <span class="module-schematic__track"><span class="module-schematic__fill" style="--fill: 58%"></span></span>
+            <span class="onboarding-schematic__value">74 kg</span>
+          </div>
+          <div class="onboarding-schematic__row">
+            <span class="onboarding-schematic__label">Taille</span>
+            <span class="module-schematic__track"><span class="module-schematic__fill" style="--fill: 71%"></span></span>
+            <span class="onboarding-schematic__value">178 cm</span>
+          </div>
+          <p class="module-schematic__note">Profil enregistré · personnalisation activée</p>
+        </div>
       </div>
       <div class="vision__content reveal">
         <h2>Une plateforme, quatre moteurs</h2>
@@ -68,7 +101,7 @@
           Synk synchronise tes agendas personnels et professionnels et
           scanne automatiquement les créneaux libres d'au moins 60 à 90
           minutes, trajet compris. Chaque dimanche, un planning hebdomadaire
-          optimal t'attend — ajustable en un simple glisser-déposer.
+          optimal t'attend ajustable en un simple glisser-déposer.
         </p>
         <p class="module__sub">
           <strong>Time-Blocking Protecteur :</strong> un événement factice
@@ -104,7 +137,7 @@
           Un algorithme calcule un score de compatibilité basé sur les
           disponibilités communes, la parité d'objectifs et le profil
           comportemental. Les deux utilisateurs signent un
-          <strong>Contrat de Constance</strong> de 3 semaines — un cycle
+          <strong>Contrat de Constance</strong> de 3 semaines un cycle
           court et renouvelable pour éviter la lassitude.
         </p>
         <p class="module__sub">
@@ -114,13 +147,19 @@
         </p>
       </div>
       <div class="module__visual reveal">
-        <div class="crop-decor">
-          <div class="crop-decor__piece crop-decor__piece--star">
-            <img src="assets/5.jpg" alt="">
+        <div class="match-schematic module-schematic">
+          <div class="match-schematic__avatars">
+            <span class="match-schematic__avatar">TH</span>
+            <span class="module-schematic__track"><span class="module-schematic__fill" style="--fill: 92%"></span></span>
+            <span class="match-schematic__avatar">LM</span>
           </div>
-          <div class="crop-decor__piece crop-decor__piece--ribbon">
-            <img src="assets/5.jpg" alt="">
+          <p class="match-schematic__label">92% de compatibilité</p>
+          <div class="match-schematic__weeks">
+            <span class="week week--done">✓</span>
+            <span class="week week--active">S2</span>
+            <span class="week">S3</span>
           </div>
+          <p class="module-schematic__note">Contrat de Constance · 12 séances validées ensemble</p>
         </div>
       </div>
     </div>
@@ -143,7 +182,30 @@
         </p>
       </div>
       <div class="module__visual reveal">
-        <img src="assets/4.jpg" alt="Plan de repas Synk affiché sur un téléphone, avec suivi des macronutriments du jour" style="border-radius: 16px; max-width: 320px;">
+        <div class="macro-schematic module-schematic">
+          <div class="macro-schematic__chips">
+            <span class="chip">Poulet</span>
+            <span class="chip">Riz</span>
+            <span class="chip">Courgette</span>
+            <span class="chip">Huile d'olive</span>
+          </div>
+          <div class="macro-bar">
+            <span class="macro-bar__label">Protéines</span>
+            <span class="module-schematic__track"><span class="module-schematic__fill" style="--fill: 82%"></span></span>
+            <span class="macro-bar__value">164g</span>
+          </div>
+          <div class="macro-bar">
+            <span class="macro-bar__label">Glucides</span>
+            <span class="module-schematic__track"><span class="module-schematic__fill" style="--fill: 68%"></span></span>
+            <span class="macro-bar__value">210g</span>
+          </div>
+          <div class="macro-bar">
+            <span class="macro-bar__label">Lipides</span>
+            <span class="module-schematic__track"><span class="module-schematic__fill" style="--fill: 45%"></span></span>
+            <span class="macro-bar__value">58g</span>
+          </div>
+          <p class="module-schematic__note">Recalculé au gramme près pour ton quota du jour</p>
+        </div>
       </div>
     </div>
   </section>
@@ -151,22 +213,37 @@
     <div class="container module__grid">
       <div class="module__content reveal">
         <p class="module__eyebrow">Module 04</p>
-        <h3>Le Cerveau IA — Coach Virtuel Omniscient</h3>
+        <h3>Le Cerveau IA Coach Virtuel Omniscient</h3>
         <p>
           Le coach croise les données de tous les modules : en cas de
           stagnation détectée sur 3 séances consécutives, il diagnostique la
-          cause — déficit calorique, manque de sommeil, agenda surchargé —
+          cause déficit calorique, manque de sommeil, agenda surchargé
           et ajuste automatiquement le programme.
         </p>
         <blockquote class="module__quote">
           « Salut ! J'ai analysé tes performances au squat cette semaine. Tu
           as stagné, mais tes nuits du jeudi étaient courtes à cause de ton
           planning. J'ai adapté ta séance de demain pour te laisser
-          récupérer — on va chercher le record la semaine prochaine ! »
+          récupérer on va chercher le record la semaine prochaine ! »
         </blockquote>
       </div>
       <div class="module__visual reveal">
-        <img src="assets/3.jpg" alt="Anneau de progression et statistiques quotidiennes affichés sur un téléphone" style="border-radius: 16px; max-width: 280px;">
+        <div class="diagnostic-schematic module-schematic">
+          <div class="diagnostic-schematic__sessions">
+            <div class="session"><span class="session__bar" style="--h: 70%"></span><span class="session__label">S12</span></div>
+            <div class="session"><span class="session__bar" style="--h: 74%"></span><span class="session__label">S13</span></div>
+            <div class="session session--flag"><span class="session__bar" style="--h: 73%"></span><span class="session__label">S14</span></div>
+          </div>
+          <div class="diagnostic-schematic__voice">
+            <span class="waveform" aria-hidden="true">
+              <span style="height: 40%"></span><span style="height: 80%"></span><span style="height: 55%"></span>
+              <span style="height: 95%"></span><span style="height: 60%"></span><span style="height: 75%"></span>
+              <span style="height: 45%"></span>
+            </span>
+            <span class="diagnostic-schematic__voice-label">Rapport vocal · 0:42</span>
+          </div>
+          <p class="module-schematic__note">Stagnation détectée au squat — volume ajusté pour demain</p>
+        </div>
       </div>
     </div>
   </section>

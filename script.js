@@ -16,4 +16,22 @@ function initScrollReveal() {
   targets.forEach(function (el) { observer.observe(el); });
 }
 
-document.addEventListener('DOMContentLoaded', initScrollReveal);
+function initWaveformMotion() {
+  var waveforms = document.querySelectorAll('.waveform');
+  if (!waveforms.length) return;
+  if (!('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      entry.target.classList.toggle('is-playing', entry.isIntersecting);
+    });
+  }, { threshold: 0.4 });
+
+  waveforms.forEach(function (el) { observer.observe(el); });
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  initScrollReveal();
+  initWaveformMotion();
+});
