@@ -66,3 +66,379 @@ img { max-width: 100%; display: block; }
     transition: none;
   }
 }
+
+/* HERO */
+.hero {
+  background: linear-gradient(160deg, var(--forest) 0%, var(--forest-dark) 100%);
+  color: var(--cream);
+  padding: var(--space-6) 0;
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+@media (min-width: 800px) {
+  .hero__grid {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+}
+
+.hero__wordmark {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.85rem;
+  color: var(--accent);
+  margin-bottom: var(--space-2);
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  color: var(--cream);
+}
+
+.hero__lede {
+  font-size: 1.1rem;
+  max-width: 42ch;
+  color: rgba(251, 251, 245, 0.85);
+}
+
+.hero__image img {
+  border-radius: 16px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+  margin: 0 auto;
+  max-width: 360px;
+}
+
+/* CONSTAT */
+.constat {
+  padding: var(--space-6) 0;
+}
+
+.constat__inner {
+  max-width: 60ch;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.constat h2 {
+  color: var(--forest);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.constat p {
+  font-size: 1.15rem;
+}
+
+/* VISION */
+.vision {
+  padding: var(--space-6) 0;
+  background: var(--mint);
+}
+
+.vision__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+@media (min-width: 800px) {
+  .vision__grid {
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+}
+
+.vision__image img {
+  border-radius: 16px;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.vision h2 {
+  color: var(--forest);
+}
+
+.vision__caption {
+  font-size: 0.95rem;
+  color: var(--forest-dark);
+  font-style: italic;
+}
+
+/* MODULES (shared pattern) */
+.module {
+  padding: var(--space-6) 0;
+}
+
+.module:nth-of-type(even) {
+  background: var(--mint);
+}
+
+.module__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+@media (min-width: 800px) {
+  .module__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .module--reverse .module__grid {
+    direction: rtl;
+  }
+  .module--reverse .module__grid > * {
+    direction: ltr;
+  }
+}
+
+.module__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.8rem;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.module h3 {
+  color: var(--forest);
+  font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+}
+
+.module__sub {
+  font-size: 0.95rem;
+  color: var(--forest-dark);
+}
+
+.module__visual {
+  display: flex;
+  justify-content: center;
+}
+
+/* MODULE 1 — calendar schematic */
+.calendar-schematic {
+  background: var(--forest);
+  color: var(--cream);
+  border-radius: 16px;
+  padding: var(--space-3);
+  width: 100%;
+  max-width: 320px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.calendar-schematic__days,
+.calendar-schematic__slots {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--space-1);
+  text-align: center;
+}
+
+.calendar-schematic__days span {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.calendar-schematic__slots {
+  margin-top: var(--space-2);
+}
+
+.slot {
+  display: block;
+  height: 48px;
+  border-radius: 8px;
+  background: rgba(251, 251, 245, 0.1);
+}
+
+.slot--active {
+  background: var(--accent);
+}
+
+.calendar-schematic__note {
+  margin-top: var(--space-2);
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+
+/* MODULE 2 — decorative crops from 5.jpg */
+.crop-decor {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+  justify-content: center;
+}
+
+.crop-decor__piece {
+  width: 140px;
+  height: 140px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.crop-decor__piece img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.crop-decor__piece--star img {
+  object-position: 100% 0%;
+}
+
+.crop-decor__piece--ribbon img {
+  object-position: 0% 100%;
+}
+
+@media (max-width: 500px) {
+  .crop-decor__piece {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* MODULE 4 — coach quote */
+.module__quote {
+  margin: var(--space-2) 0 0;
+  padding-left: var(--space-3);
+  border-left: 3px solid var(--accent);
+  font-style: italic;
+  color: var(--forest-dark);
+}
+
+/* FLYWHEEL */
+.flywheel {
+  padding: var(--space-6) 0;
+  background: var(--forest);
+  color: var(--cream);
+  text-align: center;
+}
+
+.flywheel__heading {
+  color: var(--cream);
+  margin-bottom: var(--space-4);
+}
+
+.flywheel__list {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.flywheel__step {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  text-align: left;
+  background: rgba(251, 251, 245, 0.06);
+  border-radius: 12px;
+  padding: var(--space-2);
+}
+
+.flywheel__number {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--forest-dark);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flywheel__step h3 {
+  color: var(--cream);
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.flywheel__step p {
+  margin: 0;
+  color: rgba(251, 251, 245, 0.8);
+  font-size: 0.95rem;
+}
+
+.flywheel__loop {
+  margin-top: var(--space-4);
+  font-size: 1.3rem;
+  color: var(--accent);
+}
+
+/* AVANTAGES */
+.avantages {
+  padding: var(--space-6) 0;
+}
+
+.avantages h2 {
+  color: var(--forest);
+  text-align: center;
+  margin-bottom: var(--space-4);
+}
+
+.avantages__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+
+@media (min-width: 700px) {
+  .avantages__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.avantages__card {
+  background: var(--cream);
+  border-radius: 16px;
+  padding: var(--space-3);
+  box-shadow: 0 10px 30px rgba(11, 59, 46, 0.08);
+}
+
+.avantages__icon {
+  width: 32px;
+  height: 32px;
+  color: var(--accent);
+  margin-bottom: var(--space-1);
+}
+
+.avantages__card h3 {
+  color: var(--forest);
+  font-size: 1.15rem;
+}
+
+.avantages__card p {
+  font-size: 0.95rem;
+  color: var(--ink);
+  margin: 0;
+}
+
+/* FOOTER */
+.footer {
+  background: var(--forest-dark);
+  color: rgba(251, 251, 245, 0.7);
+  padding: var(--space-4) 0;
+  text-align: center;
+}
+
+.footer__wordmark {
+  font-family: var(--font-display);
+  color: var(--cream);
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+}
+
+.footer__tagline,
+.footer__copy {
+  font-size: 0.85rem;
+  margin: 0.25rem 0;
+}
